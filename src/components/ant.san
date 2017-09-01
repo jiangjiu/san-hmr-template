@@ -1,0 +1,34 @@
+<template>
+    <div>
+        <p>antant  {{name}}</p>
+
+    </div>
+</template>
+
+<script>
+export default {
+    initData() {
+        return {
+            name: '蚂蚁组件名字哦'
+        };
+    },
+    created() {
+    },
+
+    attached() {
+        if (this.el.parentNode !== document.body) {
+            document.body.appendChild(this.el);
+        }
+        console.log(this.el);
+    },
+    detached() {
+        console.log('detached', this.el);
+    },
+    disposed() {
+        console.log('disposed', this.el);
+    }
+
+};
+</script>
+
+

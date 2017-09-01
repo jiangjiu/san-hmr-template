@@ -1,0 +1,35 @@
+<template>
+    <div class="son-container">
+        <h1 on-click="onClick">{{name}}</h1>
+        <p>我的隔壁是{{father}}</p>
+    </div>
+</template>
+
+<script>
+import Ant from './ant.san';
+
+export default {
+    components: {
+        'ant': Ant
+    },
+    attached() {
+        console.log('son-attached');
+    },
+    initData() {
+        return {
+            name: '我是儿子'
+        };
+    },
+    onClick() {
+        this.fire('bubble', '冒泡啦c');
+    }
+};
+</script>
+
+<style>
+.son-container {
+    color: #fff;
+    margin-left: 20px;
+    background-color: cornflowerblue;
+}
+</style>

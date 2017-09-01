@@ -1,0 +1,42 @@
+<template>
+    <div class="app-container">
+        <img src="./assets/logo.svg" alt="" class="app-logo">
+        <h1 class="color-red">{{name}}</h1>
+
+        <router-link to="/wang">老王</router-link>
+        <router-link to="/ant">蚂蚁元素</router-link>
+
+        <div id="content"></div>
+    </div>
+
+</template>
+
+<script>
+import {Link} from 'san-router';
+
+export default {
+    compiled(){
+        console.log('app compiled');
+    },
+    components: {
+        'router-link': Link
+    },
+    initData() {
+        return {
+            name: 'san 一个原谅色框架'
+        };
+    }
+};
+</script>
+
+<style lang="stylus">
+
+.color-red
+    color green
+    font-size 42px
+
+.app-logo
+    display block
+    width 100px
+    margin 0 auto
+</style>

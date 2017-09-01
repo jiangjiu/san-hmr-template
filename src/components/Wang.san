@@ -1,0 +1,31 @@
+<template>
+    <div class="wang-container">
+        <h2>{{name}}</h2>
+        <son father="{{father}}" on-bubble="onBubble($event)"></son>
+    </div>
+</template>
+
+<script>
+import Son from './Son.san';
+
+export default {
+    components: {
+        'son': Son
+    },
+    initData() {
+        return {
+            name: '我是快乐的老王',
+            father: ' 王叔叔'
+        };
+    },
+    onBubble(value) {
+        console.log(value);
+    }
+};
+</script>
+
+<style>
+.wang-container {
+    background-color:greenyellow;
+}
+</style>
