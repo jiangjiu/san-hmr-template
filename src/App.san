@@ -23,7 +23,7 @@ export default {
     },
     initData() {
         return {
-            name: 'san 一个原谅色框架'
+            name: 'san 一个MVVM框架'
         };
     }
 };
