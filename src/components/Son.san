@@ -1,6 +1,6 @@
 <template>
-    <div class="son-container">
-        <h1 on-click="onClick">{{name}}</h1>
+    <div on-click="onClick" class="son-container">
+        <h1>{{name}}</h1>
         <p>我的隔壁是{{father}}</p>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
         };
     },
     onClick() {
-        this.fire('bubble', '冒泡啦c');
+        this.fire('bubble', '冒泡啦');
     }
 };
 </script>
